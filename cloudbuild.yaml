@@ -9,5 +9,9 @@ steps:
     args:
       - 'push'
       - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+
 images:
   - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
