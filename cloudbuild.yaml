@@ -1,17 +1,23 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-    - 'build'
-    - '-t'
-    - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
-    - '-f'
-    - 'TestApp/Dockerfile'
-    - 'TestApp'
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Build Image'
+    args:
+      - 'build'
+      - '-t'
+      - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+      - '-f'
+      - 'TestApp/Dockerfile'
+      - 'TestApp'
 
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-    - 'push'
-    - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Image'
+    args:
+      - 'push'
+      - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
 
 images:
-- 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+  - 'me-central1-docker.pkg.dev/applab-poc-project-02/poc-application/frontend:$SHORT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
