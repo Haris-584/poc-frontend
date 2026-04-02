@@ -1,0 +1,102 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.counter button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #1a73e8;
+  background: white;
+  color: #1a73e8;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.counter button:hover {
+  background: #1a73e8;
+  color: white;
+}
+
+.counter span {
+  font-size: 36px;
+  font-weight: 700;
+  min-width: 48px;
+  color: #1a1a2e;
+}
+
+.info {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-row span:first-child { color: #888; }
+.info-row span:last-child { font-weight: 500; color: #333; }
